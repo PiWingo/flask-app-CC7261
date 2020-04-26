@@ -1,0 +1,1 @@
+web: hunicorn deploy:app
