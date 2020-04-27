@@ -49,10 +49,11 @@ class Secador(threading.Thread):
 
 
 
-if __name__ == '__main__':
+def create_app():
+    global app
     print('starting logic thread...')
     sec = Secador()
     sec.start()
     print('logic thread started!')
     print('starting flask server')
-    app.run(debug=True)
+    return app
