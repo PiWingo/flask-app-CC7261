@@ -11,7 +11,7 @@ def postVolume():
     data = request.get_json()
 
     global volume
-    volume += (data['solucao'] * .99)
+    volume += (data['solucao'] * 0.99)
 
     response = {
         'volume': volume
