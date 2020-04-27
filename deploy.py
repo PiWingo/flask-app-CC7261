@@ -49,7 +49,7 @@ class Secador(threading.Thread):
 
 
 
-if __name__ == '__main__':
+def create_app():
     print('starting logic thread...')
     sec = Secador()
     sec.start()
