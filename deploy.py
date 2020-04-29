@@ -1,4 +1,5 @@
 from flask import Flask, request
+import requests
 import threading
 import time
 
@@ -43,7 +44,7 @@ class Secador(threading.Thread):
                 }
                 print('sending volume to storage tank')
                 print(request)
-                #fazer callout pro tanque de biodisel
+                req = requests.post('https://tanque-biodiesel.herokuapp.com/biodiesel', json = request, headers = {"Content-Type": "application/json"})
                 volume = 0
 
 
