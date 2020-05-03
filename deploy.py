@@ -44,7 +44,7 @@ class Secador(threading.Thread):
                 }
                 print('sending volume to storage tank')
                 print(request)
-                req = requests.post('https://tanque-biodiesel.herokuapp.com/biodiesel', json = request, headers = {"Content-Type": "application/json"})
+                req = requests.post('https://tanquesistemas.herokuapp.com/biodiesel', json = request, headers = {"Content-Type": "application/json"})
                 volume = 0
 
 
