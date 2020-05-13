@@ -14,6 +14,9 @@ def postVolume():
     global volume
     volume += (data['solucao'] * 0.99)
 
+    print('receiving compound')
+    print(data['solucao'])
+    
     response = {
         'volume': volume
     }
