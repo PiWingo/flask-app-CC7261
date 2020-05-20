@@ -7,11 +7,12 @@ app = Flask(__name__)
 @app.route('/data', methods=['POST'])
 def postData():
 
-    x = request.data
+    data = request.get_json()
 
-    print(x)
+    for x in data:
+        print(x)
 
-    return x
+    return data
 
 
 
