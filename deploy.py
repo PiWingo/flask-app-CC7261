@@ -8,9 +8,7 @@ app = Flask(__name__)
 def postData():
 
     data = request.get_json()
-
-    for x in data:
-        print(x)
+    print(data)
 
     return data
 
