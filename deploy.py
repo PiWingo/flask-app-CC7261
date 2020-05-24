@@ -58,7 +58,7 @@ def calcula_CNPJ(num):
         temp += 1
 
     num += str(valida_digito(resp%11))
-    
+
     return num
 
 app = Flask(__name__)
@@ -86,9 +86,3 @@ def postData():
     print(f'returning {len(data)} calculated numbers')
 
     return json.dumps(response)
-
-
-
-def create_app():
-    global app
-    return app
